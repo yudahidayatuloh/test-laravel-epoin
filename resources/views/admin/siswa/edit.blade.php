@@ -33,7 +33,7 @@
         </ul>
     </div>
     @endif
-
+        <!-- test -->
     <form action="{{ route('siswa.update', $siswa->id)}}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
