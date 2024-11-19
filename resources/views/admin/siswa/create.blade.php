@@ -9,7 +9,7 @@
 </head>
 <body class="bg-white h-screen flex items-center justify-center">
     <div class="container mx-auto p-6 bg-white rounded-lg shadow-lg max-w-2xl w-full">
-        <h1 class="text-3xl font-bold mb-4 text-center text-[#4794CA]">Tambah Siswa</h1>
+        <h1 class="text-3xl font-bold mb-4 text-center text-[#4794CA]">TAMBAH SISWA</h1>
         @if($errors->any())
             <div class="alert alert-danger mb-4">
                 <ul>
@@ -97,7 +97,7 @@
             </div>
 
             <div class="flex justify-between space-x-2 mt-4">
-                <a href="{{ route('siswa.index') }}" class="btn btn-primary text-white">Kembali</a>
+                <a href="{{ route('siswa.index') }}" class="btn bg-[#4794CA] hover:bg-[#3876a1] text-white">Kembali</a>
                 <div class="flex space-x-2">
                     <button type="submit" class="btn bg-green-500 text-white hover:bg-green-600">Simpan Data</button>
                     <button type="reset" class="btn btn-error text-white">Reset Data</button>

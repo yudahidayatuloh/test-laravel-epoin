@@ -1,3 +1,4 @@
+<title>Data siswa</title>
 @extends('layouts.abay')
 
 @section('content')

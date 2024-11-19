@@ -1,3 +1,4 @@
+<title>Hallo admin</title>
 @extends('layouts.abay')
 
 @section('content')

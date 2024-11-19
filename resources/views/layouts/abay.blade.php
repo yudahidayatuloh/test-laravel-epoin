@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dashboard Admin</title>
+
     @vite('resources/css/app.css')
 </head>
 <body class="bg-white min-h-screen">
@@ -19,13 +19,13 @@
                     <svg class="w-6 h-6 text-white hover:text-[#e8e8e8] dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                         <path fill-rule="evenodd" d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z" clip-rule="evenodd"/>
                     </svg>
-                    <a class="font-semibold" href="{{ route('admin/dashboard') }}">Beranda</a>
+                    <a class="font-normal" href="{{ route('admin/dashboard') }}">Beranda</a>
                 </li>
                 <li class="flex items-center space-x-3 text-white text-lg hover:text-[#e8e8e8]">
                     <svg class="w-6 h-6 text-white hover:text-[#e8e8e8] dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                         <path fill-rule="evenodd" d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z" clip-rule="evenodd"/>
                     </svg>
-                    <a class="font-semibold" href="{{ route('siswa.index') }}">Data Siswa</a>
+                    <a class="font-normal" href="{{ route('siswa.index') }}">Data Siswa</a>
                 </li>
             </ul>
         </div>
