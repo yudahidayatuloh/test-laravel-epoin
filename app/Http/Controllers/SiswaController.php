@@ -23,7 +23,7 @@ class SiswaController extends Controller
             'users.name',
             'users.email'
         )
-        ->paginate(10);
+        ->paginate(5);
 
         if(request('cari')){
             $siswas = $this->search(request('cari'));
@@ -104,7 +104,7 @@ class SiswaController extends Controller
         )->where('users.name', 'like', '%' . $cari . '%')
         ->orWhere('siswas.nis', 'like', '%' . $cari . '%')
         ->orWhere('users.email', 'like', '%' . $cari . '%')
-        ->paginate(10);
+        ->paginate(5);
 
         return $siswas;
      }
