@@ -35,7 +35,7 @@
             <div class="skeleton-line h-6 w-2/3"></div>
         </div>
 
-        <div class="flex items-center justify-end ml-[100px] mr-[100px]">
+        <div class="flex items-center justify-end ml-[45px] mr-[45px]">
             <form action="" id="search-form" method="GET" class="flex items-center w-full max-w-md">
                 <input type="text" name="cari" placeholder="Cari..." class="input input-bordered input-sm w-full">
                 <input type="submit" class="btn bg-[#4794CA] hover:bg-[#3876a1] btn-sm ml-2 text-white" value="Cari">
@@ -43,15 +43,12 @@
         </div>
 
         <div id="data-table" class="overflow-x-auto mt-5">
-            <table class="table w-full">
+            <table class="table w-full text-center">
                 <thead>
                     <tr>
                         <th>Foto</th>
-                        <th>NIS</th>
                         <th>Nama</th>
-                        <th>Email</th>
                         <th>Kelas</th>
-                        <th>No Hp</th>
                         <th>Status</th>
                         <th>Aksi</th>
                     </tr>
@@ -66,11 +63,8 @@
                                     </div>
                                 </div>
                             </td>
-                            <td>{{ $siswa->nis }}</td>
                             <td>{{ $siswa->name }}</td>
-                            <td>{{ $siswa->email }}</td>
                             <td>{{ $siswa->tingkatan }} {{ $siswa->jurusan }} {{ $siswa->kelas }}</td>
-                            <td>{{ $siswa->hp }}</td>
                             <td>
                                 @if ($siswa->status == 1)
                                     <span class="badge badge-ghost badge-sm text-green-600">Aktif</span>

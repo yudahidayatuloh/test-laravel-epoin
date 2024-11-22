@@ -25,7 +25,6 @@
     </div>
 
         <div class="grid grid-cols-3 gap-10 mt-28">
-    <!-- Guru -->
     <div class="flex items-center justify-between bg-[#4794CA] text-white rounded-lg p-5 shadow-md w-80 h-24">
         <div>
             <span class="block text-lg font-medium">Guru</span>
@@ -34,16 +33,16 @@
         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhz8AFQvvGtYEen7kAp-davF2fGzhMzOgV0bEb-7JXL7lHlwsOmtGa8lxeB6JEIHYuuyszOELhKwY2ZNYIMfJdd4nIsYc7eWnUYHwomteMAB8V8794lU6aPwMh_YtkeUJvbznVYuxl690E/s200/LOGO+SMKN4+2015.png" alt="Logo Guru" class="w-36 h-36 -mx-14 object-contain" />
     </div>
 
-    <!-- Siswa -->
-    <div class="flex items-center justify-between bg-[#4794CA] text-white rounded-lg p-5 shadow-md w-80 h-24">
+    <div class="flex items-center justify-between bg-[#4794CA] text-white rounded-lg p-5 shadow-md w-80 h-24 hover:bg-[#3876a1] cursor-pointer transition-all">
         <div>
-            <a class="block text-lg font-medium" href="{{ route('siswa.index') }}">Siswa</a>
+            <a class="block text-lg font-medium pr-48" href="{{ route('siswa.index') }}">Siswa</a>
             <a class="block text-4xl font-bold" href="{{ route('siswa.index') }}">1500</a>
         </div>
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhz8AFQvvGtYEen7kAp-davF2fGzhMzOgV0bEb-7JXL7lHlwsOmtGa8lxeB6JEIHYuuyszOELhKwY2ZNYIMfJdd4nIsYc7eWnUYHwomteMAB8V8794lU6aPwMh_YtkeUJvbznVYuxl690E/s200/LOGO+SMKN4+2015.png" alt="Logo Guru" class="w-36 h-36 -mx-14 object-contain" />
+        <a href="{{ route('siswa.index') }}" class="w-32 h-36 -mx-14 object-contain">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhz8AFQvvGtYEen7kAp-davF2fGzhMzOgV0bEb-7JXL7lHlwsOmtGa8lxeB6JEIHYuuyszOELhKwY2ZNYIMfJdd4nIsYc7eWnUYHwomteMAB8V8794lU6aPwMh_YtkeUJvbznVYuxl690E/s200/LOGO+SMKN4+2015.png" alt="Logo Guru" />
+        </a>
     </div>
 
-    <!-- Pencatatan Poin -->
     <div class="flex items-center justify-between bg-[#4794CA] text-white rounded-lg p-5 shadow-md w-80 h-24">
         <div>
             <span class="block text-lg font-medium">Pencatatan Poin</span>
@@ -59,5 +58,5 @@
         @csrf
     </form>
 
-   <script src="{{ asset('js/script.js') }}"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
 @endsection

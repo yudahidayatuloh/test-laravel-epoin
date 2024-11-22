@@ -11,8 +11,8 @@
     <div class="container mx-auto p-8 bg-white rounded-lg shadow-lg max-w-3xl w-full">
         <h1 class="text-4xl font-bold mb-6 text-center text-[#4794CA]">Detail Siswa</h1>
         <div class="flex flex-col md:flex-row items-center mb-8">
-            <img src="{{ asset('storage/public/siswas/' . $siswa->image) }}" alt="Gambar Siswa" class="rounded-full w-36 h-36 object-cover mb-4 md:mb-0 md:mr-8 shadow-md">
-            <div class="flex flex-col gap-5 mt-5 justify-center">
+            <img src="{{ asset('storage/public/siswas/' . $siswa->image) }}" alt="Gambar Siswa" class="rounded-full w-36 h-36 object-cover mb-4 md:mb-0 md:mr-14 shadow-md">
+            <div class="flex flex-col gap-7 mt-5 justify-center">
                 <h2 class="text-3xl font-semibold text-[#4794CA]">{{ $siswa->name }}</h2>
                 <p class="text-gray-800 text-lg"><strong>NIS:</strong> {{ $siswa->nis }}</p>
                 <p class="text-gray-800 text-lg"><strong>Email:</strong> {{ $siswa->email }}</p>

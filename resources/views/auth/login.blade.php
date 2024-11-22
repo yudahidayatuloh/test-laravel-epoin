@@ -19,20 +19,28 @@
 </svg>    
         </div>
     </div>
-    <div class="flex w-1/2 justify-center items-center bg-slate-100">
-      <form class="bg-slate-100 mx-10" action="{{ route('authenticate') }}" method="POST">
-        @csrf
-        <h1 class="text-slate-700 font-bold text-5xl mb-20 text-center">Login</h1>
-        <div class="flex items-center border-2 py-4 px-3 text-xl rounded-md border-slate-300 mb-9 w-[480px]">
-          <input class="pl-2 outline-none border-none bg-slate-100 w-full" type="text" name="email" id="email" value="{{ old('email') }}" placeholder="Email Address" required />
-        </div>
-        <div class="flex items-center border-2 border-slate-300 py-4 px-3 text-xl rounded-md mb-20">
-          <input class="pl-2 outline-none border-none bg-slate-100 w-full" type="password" name="password" id="password" placeholder="Password" />
-        </div>
-        <input type="submit" value="Login" class="block mx-auto bg-[#4794CA] mt-4 py-2 text-xl  text-white font-semibold w-[180px] rounded-2xl  mb-2" required></input>
-        <span class="text-sm text-slate-700 flex justify-center items-center cursor-pointer">Belum punya akun?  <a href="{{ route('register') }}" class="text-blue-600">Daftar disini</a></span>
-      </form>
+<div class="flex w-1/2 justify-center items-center bg-slate-100 relative">
+  <div class="absolute top-8 right-5">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhz8AFQvvGtYEen7kAp-davF2fGzhMzOgV0bEb-7JXL7lHlwsOmtGa8lxeB6JEIHYuuyszOELhKwY2ZNYIMfJdd4nIsYc7eWnUYHwomteMAB8V8794lU6aPwMh_YtkeUJvbznVYuxl690E/s200/LOGO+SMKN4+2015.png" alt="" class="h-28 w-28 object-contain">
+  </div>
+
+  <form class="bg-slate-100 mx-10" action="{{ route('authenticate') }}" method="POST">
+    @csrf
+    <h1 class="text-slate-700 font-bold text-2xl mb-8 text-center">Login</h1>
+    <div class="border border-slate-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring focus:ring-blue-300 w-[280px] mb-7">
+      <input class="pl-0 outline-none border-none bg-slate-100 w-full" type="text" name="email" id="email" value="{{ old('email') }}" placeholder="Email Address" required />
     </div>
+    <div class="border border-slate-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring focus:ring-blue-300 mb-10">
+      <input class="pl-0 outline-none border-none bg-slate-100 w-full" type="password" name="password" id="password" placeholder="Password" />
+    </div>
+    <input type="submit" value="Login" class="w-[180px] block mx-auto bg-[#4794CA] text-white py-2 rounded-md text-sm font-semibold hover:bg-[#3876a1] transition duration-300 mb-2" required>
+    <p class="mt-4 text-center text-xs text-slate-600">
+      Belum punya akun?
+      <a href="{{ route('register') }}" class="text-blue-500 hover:underline">Daftar disini</a>
+    </p>
+  </form>
+</div>
+
 </div>
 
 @endsection

@@ -19,33 +19,39 @@
 </svg>    
         </div>
     </div>
-    <div class="flex w-1/2 justify-center items-center bg-slate-100">
+    <div class="flex w-1/2 justify-center items-center bg-slate-100 relative">
+  <div class="absolute top-8 right-5">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhz8AFQvvGtYEen7kAp-davF2fGzhMzOgV0bEb-7JXL7lHlwsOmtGa8lxeB6JEIHYuuyszOELhKwY2ZNYIMfJdd4nIsYc7eWnUYHwomteMAB8V8794lU6aPwMh_YtkeUJvbznVYuxl690E/s200/LOGO+SMKN4+2015.png" alt="" class="h-28 w-28 object-contain">
+  </div>
       <form class="bg-slate-100 mx-10" action="{{ route('store') }}" method="POST">
         @csrf
-        <h1 class="text-slate-700 font-bold text-4xl mb-9 text-center">Daftar</h1>
-        <div class="flex items-center border-2 py-4 px-3 rounded-md border-slate-300 mb-4 w-[380px]">
-          <input class="pl-2 outline-none border-none bg-slate-100" type="text" name="name" id="name" value="{{ old('name') }}" placeholder="Nama Lengkap" required />
+        <h1 class="text-slate-700 font-bold text-2xl mb-8 text-center">Daftar</h1>
+        <div class="border border-slate-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring focus:ring-blue-300 w-[280px] mb-7">
+          <input class="pl-0 outline-none border-none bg-slate-100" type="text" name="name" id="name" value="{{ old('name') }}" placeholder="Nama Lengkap" required />
           @if ($errors->first('name'))
             <p class="text-sm text-red-600 mt-1">{{$errors->first('name')}}</p>
           @endif
         </div>
-        <div class="flex items-center border-2 border-slate-300 py-4 px-3 rounded-md mb-4">
-          <input class="pl-2 outline-none border-none bg-slate-100" type="email" name="email" id="email" placeholder="Email Address" />
+        <div class="border border-slate-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring focus:ring-blue-300 w-[280px] mb-7">
+          <input class="pl-0 outline-none border-none bg-slate-100" type="email" name="email" id="email" placeholder="Email Address" />
           @if ($errors->first('email'))
             <p class="text-sm text-red-600 mt-1">{{$errors->first('email')}}</p>
           @endif
         </div>
-        <div class="flex items-center border-2 border-slate-300 py-4 px-3 rounded-md mb-4">
-          <input class="pl-2 outline-none border-none bg-slate-100" type="password" name="password" id="password" placeholder="Password" />
+        <div class="border border-slate-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring focus:ring-blue-300 w-[280px] mb-7">
+          <input class="pl-0 outline-none border-none bg-slate-100" type="password" name="password" id="password" placeholder="Password" />
           @if ($errors->first('password'))
             <p class="text-sm text-red-600 mt-1">{{$errors->first('password')}}</p>
           @endif
         </div>
-        <div class="flex items-center border-2 border-slate-300 py-4 px-3 rounded-md mb-14">
-          <input class="pl-2 outline-none border-none bg-slate-100" type="password" name="password_confirmation" id="password_confirmation" placeholder="Confirm Password" />
+        <div class="border border-slate-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring focus:ring-blue-300 w-[280px] mb-10">
+          <input class="pl-0 outline-none border-none bg-slate-100" type="password" name="password_confirmation" id="password_confirmation" placeholder="Confirm Password" />
         </div>
-        <input type="submit" value="Register" class="block mx-auto bg-[#4794CA] mt-4 py-2 rounded-lg text-white font-semibold w-[180px] mb-2" required></input>
-        <span class="text-sm text-slate-700 flex justify-center items-center cursor-pointer">Sudah punya akun?  <a href="{{ route('login') }}" class="text-blue-600">Login disini</a></span>
+        <input type="submit" value="Register" class="w-[180px] block mx-auto bg-[#4794CA] text-white py-2 rounded-md text-sm font-semibold hover:bg-[#3876a1] transition duration-300 mb-2" required></input>
+        <p class="mt-4 text-center text-xs text-slate-600">
+      Belum punya akun?
+      <a href="{{ route('login') }}" class="text-blue-500 hover:underline">Login disini</a>
+    </p>
       </form>
     </div>
 </div>
